@@ -1,2 +1,2 @@
 # lookup
-scheduled and triggered dns lookup service
+scheduled and triggered dns lookup
