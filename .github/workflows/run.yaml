@@ -13,7 +13,7 @@ jobs:
     steps:
     - name: get latest
       uses: actions/checkout@v2
-    - run: ${{ github.action_path }}/run.sh
+    - run: ./run.sh
       shell: bash
       env:
         LOOKUPHOST: ${{ inputs.host }}
