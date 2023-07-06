@@ -1,9 +1,10 @@
-on: [ push ]
-inputs:
-  host:
-    description: 'host to lookup'
-    required: true
-    default: 'usysrc.dev'
+on: 
+  workflow_dispatch:
+    inputs:
+      host:
+        description: 'host to lookup'
+        required: true
+        default: 'usysrc.dev'
 name: run
 jobs:
   run:
