@@ -1,0 +1,18 @@
+on: [ push ]
+inputs:
+  host:
+    description: 'host to lookup'
+    required: true
+    default: 'usysrc.dev'
+name: run
+jobs:
+  run:
+    name: run
+    runs-on: ubuntu-latest
+    steps:
+    - name: get latest
+      uses: actions/checkout@v2
+    - run: ${{ github.action_path }}/run.sh
+      shell: bash
+      env:
+        LOOKUPHOST: ${{ inputs.host }}
